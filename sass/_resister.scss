@@ -1,0 +1,204 @@
+@use "cmn";
+
+.page-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  @include cmn.mq("md") {
+    background-color: #f6f6f6;
+  }
+}
+
+.login-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 36px;
+}
+
+.login-container {
+  width: 499px;
+  padding: 40px;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0px 0pxa 10px rgba(0, 0, 0, 0.1);
+  height: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.social-button {
+  position: relative;
+  padding-left: 30px;
+}
+
+.icon {
+  position: absolute;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+.icon {
+  position: absolute;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+.social-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 14px;
+  width: 100%;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  & + & {
+    margin-top: 12px;
+  }
+}
+
+.social-button i {
+  margin-right: 10px;
+  position: absolute;
+  left: 20px;
+}
+
+.twitter-button {
+  background-color: #1c9bef;
+}
+
+.github-button {
+  background-color: #2b3136;
+}
+
+.google-button {
+  background-color: #ffffff;
+  color: #1a1a1a;
+  border: 1px solid #e3e3e3;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 36px;
+}
+
+form label {
+  color: #444;
+}
+
+form input {
+  margin-top: 7px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form button {
+  color: white;
+  background-color: cmn.$pink;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button-visible {
+  padding: 10px;
+}
+
+input::placeholder {
+  color: #8a8a8a; /* ここに好きな色を指定します */
+}
+
+.description {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #8A8A8A;
+
+  > a {
+    border-bottom: 1px solid #8A8A8A;
+    color: #8A8A8A;
+  }
+}
+
+.password__description {
+  margin-top: 7px;
+  font-size: 14px;
+  color: #8A8A8A;
+}
+
+.link-container {
+  text-align: center;
+  margin-top: 36px;
+  > a {
+    display: block;
+  }
+}
+
+
+.link-container a span {
+  color: #0c92de;
+  border-bottom: 1px solid #0c92de;
+  line-height: 1.1;
+}
+
+#email {
+  margin-bottom: 24px;
+}
+
+.forgot-password {
+  margin-bottom: 30px;
+}
+
+.forgot-password,
+.create-account {
+  font-size: 14px;
+  color: #444;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 499px) {
+  .login-container {
+    padding: 20px;
+    width: 90%;
+  }
+
+  .link-container {
+    flex-direction: column;
+  }
+}
+
+.password-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-input {
+  flex: 1;
+  padding-right: 40px;
+}
+
+.toggle-password {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 55%;
+  transform: translateY(-50%);
+}
+
+.submit {
+  margin-top: 24px;
+  padding: 14px;
+}

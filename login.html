@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Block-Vrock -ログインページ" />
+    <title>Block-Vrock</title>
+
+    <!-- reset css -->
+    <link rel="stylesheet" href="./css/reset.css" />
+    <!-- favicon -->
+    <link rel="icon" href="#" />
+    <!-- fontowsome -->
+    <link
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      rel="stylesheet"
+    />
+    <!-- googlefont -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- fontawsome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+
+
+    <!-- jquery & iScroll -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
+
+    <!-- original -->
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="header__inner">
+        <h1 class="header__logo">
+          <a href="./index.html"><img src="../img/logo.png" alt="ロゴ" /></a>
+        </h1>
+        <nav class="header__nav is-pc">
+          <ul>
+            <li class="header__nav-link">
+              <a href="#feature">BLOCKVROCKの特徴</a>
+            </li>
+            <li class="header__nav-link"><a href="#voice">ユーザーの声</a></li>
+            <li class="header__nav-link"><a href="#gallery">ギャラリー</a></li>
+            <li class="header__nav-link">
+              <a href="./login.html" target="_blank">ログイン</a>
+            </li>
+            <li class="header__right__buttons header__nav-link">
+              <a class="cta-min" href="./register.html" target="_blank"
+                >今すぐ体験</a
+              >
+              <a class="contact-min" href="https://levelenter.com/contact/"
+                target="_blank"><span>企業様・教育機関様へ</span
+                ><br />導入に関するお問い合わせ</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <div class="is-sp header__toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+    <!-- スマホ用のグローバルメニュー -->
+    <nav class="sp-header__nav is-sp">
+      <div class="sp-header__logo is-sp">
+        <a href="./index.html"><img src="./img/sp-logo.png" alt="ロゴ" /></a>
+      </div>
+      <ul class="header__menu">
+        <li class="sp-header__menu-item">
+          <a href="#feature">BLOCKVROCKの特徴</a>
+        </li>
+        <li class="sp-header__menu-item">
+          <a href="#voice">ユーザーの声</a>
+        </li>
+        <li class="sp-header__menu-item">
+          <a href="#gallery">ギャラリー</a>
+        </li>
+        <li class="sp-header__menu-item">
+          <a href="./login.html" target="_blank">ログイン</a>
+        </li>
+        <li class="header__menu-item sp-header__menu-item--cta">
+          <a class="sp-cta-min" href="./register.html" target="_blank"
+            >今すぐ体験</a
+          >
+        </li>
+        <li class="header__menu-item sp-header__menu-item--cta">
+          <a class="contact-min" href="#"
+            ><span>企業様・教育機関様へ</span>導入に関するお問い合わせ</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <main class="page-login">
+      <div class="login-container">
+        <h1 class="login-title">ログイン</h1>
+        <button class="social-button google-button">
+          <img class="icon" src="./img/google.png" alt="Google">
+          Googleでログイン
+        </button>
+        <button class="social-button twitter-button">
+          <img class="icon" src="./img/twitter.png" alt="Facebook">
+          Twitterでログイン
+        </button>
+        <button class="social-button github-button">
+          <img class="icon" src="./img/github.png" alt="Facebook">
+          GitHubでログイン
+        </button>
+        
+        <form>
+          <label for="email">メールアドレス</label>
+          <input type="email" id="email" name="email" placeholder="メールアドレスを入力">
+          <label for="password">パスワード</label>
+          <div class="password-input-container">
+            <input type="password" id="password" name="password" class="password-input" placeholder="パスワードを入力">
+            <button type="button-visible" class="toggle-password" id="toggle-password"><i class="fas fa-eye-slash" id="toggle-icon"></i></button>
+          </div>
+          <button type="submit" class="submit">ログイン</button>
+        </form>
+        <p class="description">ボタンをクリックすると、<a href="#">利用規約</a>と<a href="#">プライバシーポリシー</a>が適用されます。</p>
+        <div class="link-container">
+          <a href="#" class="forgot-password" target="_blank"><span>パスワードをお忘れの方はこちら</span></a>
+          <a href="./register.html" class="create-account"><span>新規アカウントを作成</span></a>
+        </div>
+        
+      </div>
+    </main>
+    <!-- jquery & iScroll -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
+    <script src="/js/script.js"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,175 @@
+// ＠＠＠＠＠＠＠＠＠
+// 基本記述
+// ＠＠＠＠＠＠＠＠＠
+@charset "utf-8";
+
+// ＠＠＠＠＠＠＠＠＠
+// レスポンシブ記述
+// ＠＠＠＠＠＠＠＠＠
+
+
+
+
+$breakpoints: (
+  "sp": "(max-width: 980px)",
+  "tab": "(min-width: 600px) and (max-width: 980px)", // タブレットサイズを追加
+  "md": "(min-width: 981px)",
+) !default;
+
+
+//メディアクエリ用のmixinを定義。デフォ値はmd
+@mixin mq($breakpoint: md) {
+  //map-get(マップ型変数, キー)で値を取得
+  @media #{map-get($breakpoints, $breakpoint)} {
+    //この中をカスタムできる
+    @content;
+  }
+}
+
+@include mq(sp) {
+  .is-pc {
+    display: none;
+  }
+}
+
+@include mq(md) {
+  .is-sp {
+    display: none;
+  }
+}
+
+
+// ＠＠＠＠＠＠＠＠＠
+// 共通事項定義
+// ＠＠＠＠＠＠＠＠＠
+
+// colors
+$pink:#E54E6E;
+$font-color-main: #2F3A3A;
+
+* {
+  color: $font-color-main;
+}
+
+a {
+  color: $font-color-main;
+}
+
+.text-pink {
+  color: $pink;
+} 
+
+// 各種ボタン
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0px;
+  margin: 0px;
+  @include mq("sp") {
+  }
+}
+
+//フォント
+$font-ja: "Noto Sans JP", sans-serif;
+
+body {
+  font-family: $font-ja;
+  font-size: 16px;
+  max-width: 100%;
+  @include mq("sp") {
+    font-size: 16px;
+  }
+}
+
+
+
+
+// ＠＠＠＠＠＠＠＠＠
+// インナー
+// ＠＠＠＠＠＠＠＠
+
+.inner {
+  max-width: 980px;
+  margin: 0 auto;
+  // padding-left: 40px;
+  // padding-right: 40px;
+  @include mq('sp'){
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+.max-inner {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+img {
+  width: 100%;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    opacity: 0.7;
+    transition: all 0.3s ease;
+  }
+}
+
+main {
+  overflow: hidden;
+  padding-top: 80px;
+  @include mq('sp'){
+    padding-top: 70px;
+  }
+}
+
+
+// スクロールトップボタン
+#scrollTop {
+  display: none; 
+  position: fixed; 
+  bottom: 10px; 
+  right: 10px; 
+  z-index: 99; 
+  border: none; 
+  outline: none; 
+  background-color: pink; 
+  color: white; 
+  cursor: pointer; 
+  padding: 15px; 
+  border-radius: 50%; 
+  font-size: 18px; 
+}
+
+#scrollTop:hover {
+  background-color: gainsboro; 
+}
+
+
+

@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Block-Vrock -AR/VRで、熱中を価値に変える。メタバースで驚きと感動を生み出そう"
+    />
+    <title>Block-Vrock</title>
+
+    <!-- reset css -->
+    <link rel="stylesheet" href="./css/reset.css" />
+    <!-- favicon -->
+    <link rel="icon" href="#" />
+    <!-- fontowsome -->
+    <link
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      rel="stylesheet"
+    />
+    <!-- googlefont -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+
+    <!-- fontawsome -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- jquery & iScroll -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
+
+    <!-- original -->
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="header__inner">
+        <h1 class="header__logo">
+          <a href="./index.html"><img src="../img/logo.png" alt="ロゴ" /></a>
+        </h1>
+        <nav class="header__nav is-pc">
+          <ul>
+            <li class="header__nav-link">
+              <a href="#feature">BLOCKVROCKの特徴</a>
+            </li>
+            <li class="header__nav-link"><a href="#voice">ユーザーの声</a></li>
+            <li class="header__nav-link"><a href="#gallery">ギャラリー</a></li>
+            <li class="header__nav-link">
+              <a href="./login.html" target="_blank">ログイン</a>
+            </li>
+            <li class="header__right__buttons header__nav-link">
+              <a class="cta-min" href="./register.html" target="_blank"
+                >今すぐ体験</a
+              >
+              <a class="contact-min" href="https://levelenter.com/contact/"
+                target="_blank"><span>企業様・教育機関様へ</span
+                ><br />導入に関するお問い合わせ</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <div class="is-sp header__toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+    <!-- スマホ用のグローバルメニュー -->
+    <nav class="sp-header__nav is-sp">
+      <div class="sp-header__logo is-sp">
+        <a href="./index.html"><img src="./img/sp-logo.png" alt="ロゴ" /></a>
+      </div>
+      <ul class="header__menu">
+        <li class="sp-header__menu-item">
+          <a href="#feature">BLOCKVROCKの特徴</a>
+        </li>
+        <li class="sp-header__menu-item">
+          <a href="#voice">ユーザーの声</a>
+        </li>
+        <li class="sp-header__menu-item">
+          <a href="#gallery">ギャラリー</a>
+        </li>
+        <li class="sp-header__menu-item">
+          <a href="./login.html" target="_blank">ログイン</a>
+        </li>
+        <li class="header__menu-item sp-header__menu-item--cta">
+          <a class="sp-cta-min" href="./register.html" target="_blank"
+            >今すぐ体験</a
+          >
+        </li>
+        <li class="header__menu-item sp-header__menu-item--cta">
+          <a class="contact-min" href="#"
+            ><span>企業様・教育機関様へ</span>導入に関するお問い合わせ</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <main>
+      <button id="scrollTop" title="Go to top">↑</button>
+      <!-- PC用メインビジュアルレイアウト -->
+      <section class="main__bg is-pc">
+        <div class="main__inner inner">
+          <div class="mv-avatar2 is-pc"></div>
+          <!-- アバター2 -->
+          <div class="main__body">
+            <h1 class="mv__lead"><span>AR/VR</span>で、熱中を価値に変える。</h1>
+            <h1 class="mv__ttl">
+              メタバースで<br /><span>驚きと感動</span>を<br />生み出そう。
+            </h1>
+            <a class="cta__button mv__button" href="./register.html" target="_blank"
+              >今すぐ無料で体験する</a
+            >
+          </div>
+          <div class="main__video">
+            <video autoplay muted loop playsinline id="myVideo">
+              <source src="./img/mv.MP4" type="video/mp4" />
+              Your browser does not support HTML5 video.
+            </video>
+          </div>
+          <div class="mv-avatar1"></div>
+          <!-- アバター1 -->
+        </div>
+      </section>
+
+      <!-- SP用メインビジュアルレイアウト -->
+      <section class="main__bg is-sp">
+        <div class="main__inner">
+          <div class="sp-main__body inner">
+            <!-- アバター2 -->
+            <h1 class="mv__lead"><span>AR/VR</span>で、熱中を価値に変える。</h1>
+            <h1 class="mv__ttl">
+              メタバースで<br /><span>驚きと感動</span>を<br />生み出そう。
+            </h1>
+            <div class="sp-mv-avatar2"></div>
+          </div>
+          <div class="main__video inner">
+            <video autoplay muted loop playsinline id="myVideo">
+              <source src="./img/mv.MP4" type="video/mp4" />
+              Your browser does not support HTML5 video.
+            </video>
+          </div>
+          <a class="cta__button mv__button" href="./register.html" target="_blank"
+            >今すぐ無料で体験する</a
+          >
+          <div class="sp-bottom-bg">
+            <div class="sp-mv-avatar1"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 様々な起業様に活用いただいています。 -->
+      <section class="use inner">
+        <div class="use__container inner">
+          <h3 class="use__ttl">
+            様々な<span>企業様・教育機関様</span>に<br class="is-pc">活用いただいています
+          </h3>
+          <div class="use__list">
+            <figure class="use__list-item banner1">
+              <img src="./img/gree_vr_studio.png" alt="GREE_VR_Studio" />
+            </figure>
+            <figure class="use__list-item banner10">
+              <img src="./img/nec.png" alt="NECソリューションイノベータ" />
+            </figure>
+            <figure class="use__list-item banner2">
+              <img src="./img/ntt-data.png" alt="NTTデータ" />
+            </figure>
+            <figure class="use__list-item banner4">
+              <img src="./img/seplus.png" alt="SEプラス" />
+            </figure>
+            <figure class="use__list-item banner3">
+              <img src="./img/hakosco.png" alt="ハコスコ" />
+            </figure>
+            <figure class="use__list-item banner8">
+              <img src="./img/ikubunkan.png" alt="郁文館夢学園" />
+            </figure>
+            <figure class="use__list-item banner9">
+              <img src="./img/eisu.png" alt="英数" />
+            </figure>
+            <figure class="use__list-item banner6">
+              <img src="./img/clark.png" alt="クラーク記念国際高等学校" />
+            </figure>
+            <figure class="use__list-item banner7">
+              <img src="./img/sasatuka.png" alt="渋谷区立笹塚中学校" />
+            </figure>
+            <figure class="use__list-item banner5">
+              <img src="./img/digital-hollywood.png" alt="デジタルハリウッド" />
+            </figure>
+          </div>
+          <p class="use__coment">
+            ※AR/VR/メタバースをはじめとした3D表現を使った学びや表現を、活用いただいている企業様・教育機関様。順不同。
+          </p>
+        </div>
+      </section>
+
+      <!-- 特徴 -->
+      <section class="feature max-inner" id="feature">
+        <div class="feature__container inner">
+          <h2 class="feature__ttl">
+            BLOCKVROCKの<br class="is-sp" /><span>特徴</span>
+          </h2>
+          <div class="feature__body">
+            <div class="feature__card">
+              <div class="feature__number">01</div>
+              <div class="feature__card-body">
+                <figure class="feature__icon">
+                  <img src="./img/feature__icon.png" alt="特徴1のアイコン" />
+                </figure>
+                <h3 class="feature__body-ttl">初心者もプロもOK</h3>
+                <p class="feature__body-text">
+                  簡単なAR・VRから、プロ向けのクリエイティブまで。プログラミング初心者から上級者まで楽しめる仕組みが満載。
+                </p>
+              </div>
+            </div>
+
+            <div class="feature__card">
+              <div class="feature__number">02</div>
+              <div class="feature__card-body">
+                <figure class="feature__icon">
+                  <img src="./img/icn_education.png" alt="特徴1のアイコン" />
+                </figure>
+                <h3 class="feature__body-ttl">インストール不要</h3>
+                <p class="feature__body-text">
+                  オンライン環境であれば、 パソコンからでもスマホからでも、ブラウザ上ですぐに使用できます。
+                </p>
+              </div>
+            </div>
+
+            <div class="feature__card">
+              <div class="feature__number">03</div>
+              <div class="feature__card-body">
+                <figure class="feature__icon">
+                  <img src="./img/icn_webarvr.png" alt="特徴1のアイコン" />
+                </figure>
+                <h3 class="feature__body-ttl">AR/VRが作れる</h3>
+                <p class="feature__body-text">
+                  ドラッグ＆ドロップの操作でプログラムが完成。
+                  簡単にAR/VRを生み出すことができます。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ARとVR 。 -->
+      <section class="vr">
+        <div class="vr-container inner">
+          <div class="vr__top">
+            <h2 class="vr__top-ttl vertical-ttl">
+              大人も子どもも<br />１分で作れる<br /><span>ARとVR</span>
+            </h2>
+            <div class="vr__top-body">
+              <figure class="vr__video">
+                <img src="./img/ar-vr.png" alt="">
+              </figure>
+              <p class="vr__top-txt">
+                ドラッグ＆ドロップの簡単な操作でプログラムが完成。<br />再生ボタン（▶︎）をクリック。
+              </p>
+            </div>
+          </div>
+          <div class="vt__bottom">
+            <div class="vt__bottom-body">
+              <figure class="vt__bottom__img">
+                <img src="./img/vt__bottom__img.png" alt="" />
+              </figure>
+              <p class="vr__bottom__txt">
+                VR（仮想現実）やAR（拡張現実）が一瞬で完成。<br />360度楽しめる空間ができます。
+              </p>
+            </div>
+            <div class="vt__bottom-body">
+              <figure class="vt__bottom__img">
+                <img src="./img/ar-img2.png" alt="" />
+              </figure>
+              <p class="vr__bottom__txt">
+                QRコードもURLも一瞬で作成可能。<br />スマホですぐに体験できます。SNSでの共有も簡単です。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 体験イメージビデオ１ -->
+      <section class="experience-video1">
+        <video autoplay muted  playsinline style="width: 100%; object-fit: cover">
+          <source src="./img/rppplay.MP4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </section>
+
+      <!-- 企業のPRに遊び心を -->
+      <section class="playful-pr max-inner">
+        <div class="playful-pr__container inner">
+          <h2 class="playful-pr__ttl vertical-ttl is-pc">
+            <span>企業</span>のPRに<br />遊びごころを
+          </h2>
+          <div class="playful-pr__body">
+            <div class="playful-pr__card">
+              <figure class="playful-pr__img">
+                <img
+                  src="./img/pr.png"
+                  alt="子供が熱中してゲーム感覚で取り組んでいる様子"
+                />
+              </figure>
+              <div class="playful-pr__description">
+                <h3 class="playful-pr__description-ttl">
+                  メタバースを活用した<br />
+                  コミュニケーションスペース。
+                </h3>
+                <p class="playful-pr__description-txt">
+                  メタバース空間で知らない人と交流する。
+                  子どもがプログラミングで自由に街を創り出す。<br />
+                  AR/VRだからこそ実現できます。<br />
+                  （GREE VR Studio Laboratory様）
+                </p>
+              </div>
+            </div>
+            <div class="playful-pr__card">
+              <figure class="playful-pr__img">
+                <img
+                  src="./img/use-img1.png"
+                  alt="子供がアイデアを考えている様子"
+                />
+              </figure>
+              <div class="playful-pr__description">
+                <h3 class="playful-pr__description-ttl">
+                  展示会、ショールーム。<br />仮想空間で疑似体験の提供。
+                </h3>
+                <p class="playful-pr__description-txt">
+                  AR/VRを活用して、ひと味ちがう展示会、ショールームを展開できます。<br />
+                  オンラインで参加できるから、場所にとらわれないPRが実現できます。<br />
+                  （小笠原プレシジョンラボラトリー様）
+                </p>
+              </div>
+            </div>
+            <div class="playful-pr__card">
+              <figure class="playful-pr__img">
+                <img
+                  src="./img/use-img3.png"
+                  alt="子供がアイデアを考えている様子"
+                />
+              </figure>
+              <div class="playful-pr__description">
+                <h3 class="playful-pr__description-ttl">
+                  企業内研修で、<br />創造力豊かな人材育成を。
+                </h3>
+                <p class="playful-pr__description-txt">
+                  楽しむことと学ぶことは別物ではなく、
+                  楽しみながら学ぶことが大切です。<br />
+                  AR/VRを通して、論理的思考力や問題解決力を向上させることができます。<br />
+                  （NECソリューションイノベータ株式会社様）
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ゲーム感覚で学べるから楽しく、やみつきになる。 -->
+      <section class="enthusiastic max-inner">
+        <div class="enthusiastic__container inner">
+          <h2 class="vertical-ttl enthusiastic__ttl">
+            <span>熱中</span>があふれる<br />教室づくりを
+          </h2>
+          <div class="enthusiastic__body">
+            <div class="enthusiastic__card">
+              <figure class="enthusiastic__img">
+                <img
+                  src="./img/enthusiastic-img1.png"
+                  alt="子供が熱中してゲーム感覚で取り組んでいる様子"
+                />
+              </figure>
+              <div class="enthusiastic__description">
+                <h3 class="enthusiastic__description-ttl">
+                  ゲーム感覚で学べるから<br />楽しく、やみつきになる。
+                </h3>
+                <p class="enthusiastic__description-txt">
+                  パズルのようにプログラミング言語のブロックを組み立てるだけ。<br />遊んでいる感覚で、自然とプログラミングの存在意義<br />を実感でき、基礎を身につけることができます。
+                </p>
+              </div>
+            </div>
+            <div class="enthusiastic__card">
+              <figure class="enthusiastic__img">
+                <img src="./img/enthusiastic-img2.png" alt="子供が" />
+              </figure>
+              <div class="enthusiastic__description">
+                <h3 class="enthusiastic__description-ttl">
+                  「こんなことできないかな」<br />問題解決力が自然と育つ。
+                </h3>
+                <p class="enthusiastic__description-txt">
+                  アイデアがすぐにカタチになるから、
+                  いろんなことを試したくなります。
+                  答えのない問題に何度もトライし、失敗を重ねながら試行錯誤することで、思考力や問題解決力を鍛えることができます。
+                </p>
+              </div>
+            </div>
+            <div class="enthusiastic__card">
+              <figure class="enthusiastic__img">
+                <img src="../img/enthusiastic-img3.png" alt="子供が" />
+              </figure>
+              <div class="enthusiastic__description">
+                <h3 class="enthusiastic__description-ttl">
+                  友達と共有することで<br />さらに創造力を高められる。
+                </h3>
+                <p class="enthusiastic__description-txt">
+                  QRコードで友達と作品を共有したり、ソースを使ってWEBで発表したり。お互いのアイデアから刺激を受けたりチームで作品を作ることもできます。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 授業もイベントも、ダイナミックに -->
+      <section class="dynamic">
+        <div class="dynamic__container inner">
+          <h2 class="dynamic__ttl vertical-ttl">
+            授業もイベントも<br /><span>ダイナミック</span>に
+          </h2>
+          <div class="dynamic__body cmn__card-body">
+            <div class="dynamic__card cmn__card">
+              <figure class="dynamic__img cmn__card-img">
+                <img src="../img/dynamic__img.png" alt="子供が" />
+              </figure>
+              <div class="dynamic__description cmn__description">
+                <h3 class="dynamic__description-ttl cmn__description-ttl">
+                  授業の教材も、イベントも<br />AR/VRで作り出せる。
+                </h3>
+                <p class="dynamic__description-txt cmn__description-txt">
+                  画像も、音楽も、自由にアップロードできる
+                  から、授業の補助教材として活用したり、
+                  オンライン上で様々なイベントも可能。
+                  自作の３Dキャラクターも、自分で撮影した３D写真も、AR/VRにすることができます。
+                </p>
+              </div>
+            </div>
+            <div class="dynamic__card cmn__card">
+              <figure class="dynamic__img cmn__card-img">
+                <img src="../img/dynamic__img2.png" alt="子供が" />
+              </figure>
+              <div class="dynamic__description cmn__description">
+                <h3 class="dynamic__description-ttl cmn__description-ttl">
+                  ワクワクする演出で、<br />好奇心をくすぐることができる。
+                </h3>
+                <p class="dynamic__description-txt cmn__description-txt">
+                  AR/VRを使ったコミュニケーションで、
+                  オープンキャンパスや学校行事など様々な広報活動にも活用できます。 学生のワクワクを刺激しましょう。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ユーザーの声 -->
+      <section class="voice" id="voice">
+        <div class="voice__container">
+          <div class="voice__body">
+            <h2 class="voice__ttl vertical-ttl is-sp inner">
+              確かな<span>実感</span><br />ユーザーの声
+            </h2>
+            <div class="voice__body-container">
+              <div class="voice__card voice__card1">
+                <p class="voice__txt__xl">
+                  アイデアが広がって<br />楽しかった！
+                </p>
+              </div>
+              <div class="voice__card voice__card2">
+                <p class="voice__txt__l text-pink">
+                  今までの授業には<br />ない体験。
+                </p>
+              </div>
+              <div class="voice__card voice__card3">
+                <p class="voice__txt__xl">初心者でも<br />わかりやすかった。</p>
+              </div>
+              <div class="voice__card voice__card4">
+                <p class="voice__txt__s text-pink">
+                  自分が普段使っているアプリの<br />基礎となる情報や共通点が知れた。
+                </p>
+              </div>
+              <div class="voice__card voice__card5">
+                <p class="voice__txt__s">
+                  ものの構成を<br />学ぶことができてよかった。
+                </p>
+              </div>
+              <div class="voice__card voice__card6">
+                <p class="voice__txt__xs text-pink">
+                  とても理解しやすく、<br />最高に楽しかった！
+                </p>
+              </div>
+              <div class="voice__card voice__card7">
+                <p class="voice__txt__l">
+                  プロのクリエイターが使えば <br />本格的なものも作れる。
+                </p>
+              </div>
+              <div class="voice__card voice__card8">
+                <p class="voice__txt__m text-pink">
+                  いっぱい遊べて、<br />プログラミングが<br />学べるのがいい。
+                </p>
+              </div>
+              <div class="voice__card voice__card9">
+                <p class="voice__txt__l">
+                  もっといろんな作品を<br />作ってみたい！
+                </p>
+              </div>
+            </div>
+          </div>
+          <h2 class="voice__ttl vertical-ttl is-pc">
+            確かな<span>実感</span><br />ユーザーの声
+          </h2>
+        </div>
+      </section>
+
+      <!-- クリエイティブアワード2022 -->
+      <section class="award">
+        <div class="award__inner inner">
+          <div class="award__top">
+            <div class="award__description">
+              <h4 class="award__ttl">
+                XRクリエイティブアワード2022<br />法人部門賞受賞
+              </h4>
+              <p class="award__txt">
+                XRコンソーシアム（XRC）が2015年から開催する「XRクリエイティブアワード2022」にて、「BLOCKVROCK」が法人部門賞を受賞しました。「熱中を価値に変える」というメッセージを、審査員の皆さまに評価いただき、背中を押していただいたことを嬉しく思います。
+              </p>
+            </div>
+            <figure class="award__img">
+              <img
+                src="./img/award__img.png"
+                alt="XRクリエイティブアワード2022
+          法人部門賞受賞時の写真"
+              />
+            </figure>
+          </div>
+          <div class="award__bottom video-container">
+            <div id="youtube-player">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/N4MT8Z1oiC4"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- サービスを生み出した理由 -->
+      <section class="reason">
+        <div class="reason__container inner">
+          <div class="reason__left">
+            <h2 class="reason__ttl-box vertical-ttl">
+              サービスを<br />生み出した<span>理由</span>
+            </h2>
+            <figure class="reason-logo is-pc">
+              <img src="./img/reason-logo.png" alt="" />
+            </figure>
+          </div>
+          <div class="reason__right">
+            <p class="reason__txt">
+              小学生にプログラミング教育をしていたとき、悩んでいたことがありました。<br />
+              それは、かんたんな基礎から教えても、難しい印象を与えてしまうということ。<br />
+              <span
+                >プログラミングができれば、いろいろな楽しい未来が実現できる。</span
+              ><br />
+              そのことを子どもたちに実感としてどうやって伝えればよいのか。<br />
+              そうしてたどり着いたのが、BLOCKVROCKでした。
+              <br />
+              <br />
+              お絵描き気分で、カラフルな立体を生み出せる。<br />
+              積み木で遊ぶように、画面の中でものを動かせる。<br />
+              <span>日頃遊んでいるゲームの世界を、自分自身が創り出せる。</span
+              ><br />
+              自分で作った作品を見たときの子どもたちの目の輝きは、<br />
+              今でも忘れることができません。
+              <br />
+              <br />
+              高校や専門学校でも導入いただいており、<br />
+              エンターテインメントの受け手側から作り手側になる小さな喜びの連続が、<br />
+              プログラミング教育だけでなく自発的な創造性も育てることを実感しています。
+              <br />
+              <br />
+              <span
+                >ワクワクする作品を楽しみながら作り出すことで、人と社会に役に立つこと。</span
+              ><br />
+              そんな本当の価値は、BLOCKVROCKとあなたの創造力が<br />
+              掛け合わされるところから生まれると信じています。<br />
+              まずは無料で気軽に遊んで、自分の無限の可能性に挑戦してみてください。
+            </p>
+            <p class="reason__sign">
+              株式会社レベルエンター<br />
+              代表取締役　山本 大
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 体験イメージビデオ2 -->
+      <section class="experience-video">
+        <video autoplay muted playsinline loop>
+          <source src="./img/vr-section.MP4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </section>
+
+      <!-- まずは体感　作ってみよう -->
+      <section class="experience">
+        <div class="experience__container inner">
+          <h2 class="experience__ttl vertical-ttl">
+            まずは<span>体感</span><br />作ってみよう
+          </h2>
+          <div class="experience__description">
+            <h4 class="experience__sub-ttl">
+              フォトアルバム付きバースデーメッセージのVRを<br
+                class="is-pc"
+              />作ってみましょう。
+            </h4>
+            <p class="experience__txt">
+              １）「HAPPY
+              BIRTHDAY」を伝えたい人との想い出の写真データを４、５点ご準備ください。<br />
+              ２）BLOCKVROCKで実際に作ってみましょう。<br />
+              ３）完成したVRのURLまたはQRコードを、お祝いしたい人に贈りましょう。
+            </p>
+            <div class="experience__video-wrapper">
+              <video controls autoplay muted>
+                <source src="video.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <a href="#" class="experience__guide">詳しい作り方ガイドを見る</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- AR/VRギャラリー -->
+      <section class="gallery" id="gallery">
+        <h2 class="gallery__ttl">AR/VRギャラリー</h2>
+        <div class="gallery__container inner">
+          <div class="gallery__card-container">
+            <div class="gallery__card">
+              <figure class="gallery__img">
+                <img
+                  src="./img/gallery1.png"
+                  alt="ミュージアムのVR画像サンプル"
+                />
+              </figure>
+              <div class="gallery__body">
+                <div class="gallery__body-left">
+                  <h3 class="gallery__body-ttl">ミュージアム</h3>
+                  <p class="gallery__body-txt">
+                    キャラクターを選択して、自由にミュージアム内の作品を観覧できるVRです。
+                  </p>
+                  <a href="https://run.blockvrock.com/show_user_contents?user_id=429&project_id=171f7dfc8fe196" class="gallery__link" target="_blank">体験してみる</a>
+                </div>
+                <figure class="gallery__body-right">
+                  <img
+                    src="./img/qr-musium.png"
+                    alt="ミュージアムのQRコード"
+                  />
+                </figure>
+              </div>
+            </div>
+            <div class="gallery__card">
+              <figure class="gallery__img">
+                <img
+                  src="./img/gallery2.png"
+                  alt="ミュージアムのVR画像サンプル"
+                />
+              </figure>
+              <div class="gallery__body">
+                <div class="gallery__body-left">
+                  <h3 class="gallery__body-ttl">平面検知AR</h3>
+                  <p class="gallery__body-txt">
+                    カメラで平面を検知し、その場に３Dモデルを配置できるARです。<br />
+                    ３Dモデルは配置された場所を動かなくなるため、回り込んだり、上から写真を撮ることができます。<br />
+                    スマホから体験してみてください。
+                  </p>
+                  <a href="https://run.blockvrock.com/show_user_contents?user_id=591&project_id=187c063222134" class="gallery__link" target="_blank">体験してみる</a>
+                </div>
+                <figure class="gallery__body-right">
+                  <img
+                    src="./img/qr-kenchi.png"
+                    alt="平面検知ARのQRコード"
+                  />
+                </figure>
+              </div>
+            </div>
+            <div class="gallery__card">
+              <figure class="gallery__img">
+                <img
+                  src="./img/gallery3.png"
+                  alt="ワープボタンVR画像サンプル"
+                />
+              </figure>
+              <div class="gallery__body">
+                <div class="gallery__body-left">
+                  <h3 class="gallery__body-ttl">ワープボタンVR</h3>
+                  <p class="gallery__body-txt">
+                    全天球写真を使ったVRプログラムです。<br />
+                    画面中央に配置された３Dモデルのボタンをタップすることで、別の風景にワープします。
+                  </p>
+                  <a href="https://run.blockvrock.com/show_user_contents?user_id=591&project_id=187c0a840462ae" class="gallery__link" target="_blank">体験してみる</a>
+                </div>
+                <figure class="gallery__body-right">
+                  <img
+                    src="./img/qr-warp.png"
+                    alt="ワープボタンVRのQRコード"
+                  />
+                </figure>
+              </div>
+            </div>
+            <div class="gallery__card">
+              <figure class="gallery__img">
+                <img
+                  src="./img/gallery4.png"
+                  alt="クイズVR画像サンプル"
+                />
+              </figure>
+              <div class="gallery__body">
+                <div class="gallery__body-left">
+                  <h3 class="gallery__body-ttl">クイズVR</h3>
+                  <p class="gallery__body-txt">
+                    VRの4択クイズプログラムです。<br />
+                    正解だと思う３Dモデルをクリックして答えを確かめましょう。
+                  </p>
+                  <a href="https://run.blockvrock.com/show_user_contents?user_id=591&project_id=187c0248a5a25f" class="gallery__link" target="_blank">体験してみる</a>
+                </div>
+                <figure class="gallery__body-right">
+                  <img
+                    src="./img/qr-quiz.png"
+                    alt="クイズのQRコード"
+                  />
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- cta -->
+      <section class="cta">
+        <div class="cta__container inner">
+          <div class="cta-avatar2"></div>
+          <h2 class="cta__ttl">
+            「楽しく学ぶ」を、BLOCKVROCKで。<br />
+            個人利用は無料です。<br class="is-sp" />今すぐ体験してください。
+          </h2>
+          <a class="cta__button mv__button" href="./register.html" target="_blank"
+            >今すぐ無料で体験する</a
+          >
+          <div class="cta-avatar1"></div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="contact">
+        <div class="contact__container inner">
+          <div class="contact__body">
+            <p class="contact__ttl-sub">導入をご希望の企業様・教育機関様へ</p>
+            <h3 class="contact__ttl">
+              サポートや導入方法など、<br
+                class="is-pc"
+              />お気軽にお問い合わせください
+            </h3>
+            <figure class="contact__img is-sp">
+              <img
+                src="./img/contact__img.png"
+                alt="教室で生徒が集まり、先生が指導をしている様子"
+              />
+            </figure>
+            <div class="contact__button__wrapper">
+              <a class="contact__button" href="https://levelenter.com/contact" target="_blank"
+                >お問い合わせはこちら</a
+              >
+            </div>
+          </div>
+          <figure class="contact__img is-pc">
+            <img
+              src="./img/contact__img.png"
+              alt="教室で生徒が集まり、先生が指導をしている様子"
+            />
+          </figure>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer__top">
+        <img src="./img/footer-img.png" alt=" " class="footer__top-img is-pc" />
+        <img
+          src="./img/sp-footer-img.png"
+          alt=" "
+          class="footer__top-img is-sp"
+        />
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__bottom-inner inner">
+          <div class="footer__links">
+            <a href="https://levelenter.com/" target="_blank">運営会社</a>
+            <a href="https://blockvrock.com/public/kiyaku.html" target="_blank">利用規約</a>
+          </div>
+          <div class="footer__copyright">Copyright &copy; 2023 BLOCKVROCK</div>
+        </div>
+      </div>
+    </footer>
+    <!-- jquery & iScroll -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.1.3/iscroll.min.js"></script>
+    <script src="/js/script.js"></script>
+  </body>
+</html>

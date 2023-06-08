@@ -1,0 +1,112 @@
+// _cmn.scssを読み込む
+@use "cmn";
+
+// cta__button
+.cta__button {
+  display: inline-block;
+  font-weight: 900;
+  font-size: 26px;
+  text-align: center;
+  text-decoration: none;
+  padding: 18px 34px;
+  background-color: cmn.$pink;
+  color: #ffffff;
+  line-height: 1.461;
+  transition: all 0.3s ease;
+  &:hover {
+    opacity: 0.6;
+  }
+  &:active {
+    opacity: 0.6;
+  }
+  @include cmn.mq('sp'){
+    font-size: 23px;
+    display: block;
+    max-width: 327px;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+}
+
+// 縦書きのタイトル
+.vertical-ttl {
+  @include cmn.mq('md'){
+    writing-mode: vertical-rl
+  }
+  // display: inline-block;
+  align-self: flex-start;
+  font-size: 56px;
+  line-height: 1.4;
+  text-orientation: upright; /* すべて縦方向に表示 */
+  font-weight: 900;
+  letter-spacing: 2px;
+  @include cmn.mq('sp'){
+    font-size: 36px;
+    line-height: 1.4444;
+  }
+  @include cmn.mq("tab") {
+    // タブレット用のスタイル
+    font-size: 45px;
+  }
+}
+
+.vertical-ttl span {
+  color: cmn.$pink;
+  font-weight: 900;
+  font-size: 56px;
+  line-height: 60px;
+  /* または107% */
+  text-align: center;
+  @include cmn.mq('sp'){
+    font-size: 36px;
+    line-height: 1.444;
+  }
+  @include cmn.mq("tab") {
+    // タブレット用のスタイル
+    font-size: 45px;
+  }
+}
+
+// 共通のレイアウトのカード
+.cmn__card-body {
+  @include cmn.mq('md'){
+    flex: 0 1 78.163%;
+  }
+}
+
+.cmn__card {
+  @include cmn.mq('md'){
+    display: flex;
+    align-items: center;
+  }
+}
+
+.cmn__card-img {
+  @include cmn.mq('md'){
+    flex: 1 0 44.38%;
+    margin-right: 36px;
+    min-height: 234px;
+  }
+}
+
+.cmn__description {
+}
+
+.cmn__description-ttl {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.461;
+  margin-bottom: 16px;
+  @include cmn.mq('sp'){
+    margin-top: 16px;
+    font-size: 20px;
+    line-height: 1.45;
+  }
+}
+
+.cmn__description-txt {
+  font-weight: 400;
+font-size: 14px;
+line-height: 1.857;
+}
