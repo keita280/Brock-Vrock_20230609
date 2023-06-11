@@ -1,13 +1,38 @@
 @use "cmn";
 
+
+.page-login {
+  padding-top: 0;
+}
+
+header.is-open {
+  box-shadow: none;
+}
+
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+.subpage-header__logo {
+  margin: 14px 16px;
+  width: 143px;
+  height: 53px;
+  
+  @include cmn.mq("sp") {
+    width: 107px;
+    height: 40px;
+  }
+}
+
+
 .page-login {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  @include cmn.mq("md") {
-    background-color: #f6f6f6;
-  }
 }
 
 .login-title {

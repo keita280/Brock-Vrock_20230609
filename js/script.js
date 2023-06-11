@@ -11,8 +11,8 @@ $(document).ready(function() {
       var offset = target.offset().top;
       
       // グローバルメニューを閉じる（クラス名や要素に適宜変更してください）
-      $('.header__toggle').removeClass('active');
-      $('.header__nav').removeClass('active');
+      $('.header__toggle').removeClass('is-active');
+      $('.header__nav').removeClass('is-active');
       $('.sp-header__nav').removeClass('is-active');
       
       $('html, body').animate({
@@ -27,10 +27,17 @@ $(document).ready(function() {
 // //@@@@@@@@@@@@@@@@@@@@@@@@@
 
   // ハンバーガーメニューの開閉
-  $('.header__toggle').on('click', function() {
-    $(this).toggleClass('active');
-    $('.header__nav').toggleClass('active');
+  $('.header__toggle').on('click', function(event) {
+    console.log('Header toggle clicked!'); // 追加
+    $(this).toggleClass('is-active');
+    $('.header__nav').toggleClass('is-active');
     $('.sp-header__nav').toggleClass('is-active');
+    $('.overlay').toggleClass('is-active');
+    if ($('.header__toggle').hasClass('is-active')) {
+      $('.overlay').show(); // ハンバーガーメニューが開いた場合にはoverlayを表示する
+    } else {
+      $('.overlay').hide(); // ハンバーガーメニューが閉じた場合にはoverlayを非表示にする
+    }
   });
 });
 
@@ -47,6 +54,42 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 });
+
+
+$(document).ready(function() {
+  var header = document.querySelector("header");  // ヘッダーを取得
+$(document).ready(function() {
+  // Overlayがクリックされた時にハンバーガーメニューとオーバーレイを閉じる
+  $('.overlay').on('click', function(event) {
+    event.preventDefault();
+    event.stopPropagation();
+    $('.header__toggle').removeClass('is-active');
+    $('.header__nav').removeClass('is-active');
+    $('.sp-header__nav').removeClass('is-active');
+    $('.overlay').removeClass('is-active');
+    if (header) {
+      header.classList.remove("is-open");  // ヘッダーのボックスシャドウを消すクラスを削除
+    }
+  });
+
+  // ナビゲーションリンクがクリックされた時にハンバーガーメニューとオーバーレイを閉じる
+  $('.sp-header__menu-item a').on('click', function(event) {
+    $('.header__toggle').removeClass('is-active');
+    $('.header__nav').removeClass('is-active');
+    $('.sp-header__nav').removeClass('is-active');
+    $('.overlay').removeClass('is-active');
+    if (header) {
+      header.classList.remove("is-open");  // ヘッダーのボックスシャドウを消すクラスを削除
+    }
+    $('.overlay').hide(); 
+
+  });
+});
+
+});
+
+
+
 
 
 
@@ -119,19 +162,25 @@ $(function(){
 // ログイン画面のボタンの表示・非表示
 //@@@@@@@@@@@@@@@@@@@@@@@@@
 
-document.getElementById('toggle-password').addEventListener('click', function () {
-  var passwordInput = document.getElementById('password');
-  var toggleIcon = document.getElementById('toggle-icon');
 
-  if (passwordInput.type === "password") {
+var togglePasswordElement = document.getElementById('toggle-password');
+var passwordInput = document.getElementById('password');
+var toggleIcon = document.getElementById('toggle-icon');
+
+// togglePasswordElement, passwordInput, toggleIconがすべて存在する場合だけ処理を行う
+if (togglePasswordElement && passwordInput && toggleIcon) {
+  togglePasswordElement.addEventListener('click', function () {
+    if (passwordInput.type === "password") {
       passwordInput.type = "text";
       // FontAwesome 5用の切り替え
       toggleIcon.classList.remove('fa-eye-slash');
       toggleIcon.classList.add('fa-eye');
-  } else {
+    } else {
       passwordInput.type = "password";
       // FontAwesome 5用の切り替え
       toggleIcon.classList.remove('fa-eye');
       toggleIcon.classList.add('fa-eye-slash');
-  }
-});
+    }
+  });
+}
+

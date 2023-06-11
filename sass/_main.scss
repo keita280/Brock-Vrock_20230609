@@ -33,6 +33,8 @@ header.is-open {
     height: 40px;
   }
 }
+
+
 .header__nav > ul {
   display: flex;
   align-items: center;
@@ -89,11 +91,14 @@ header.is-open {
 }
 
 .cta-min:hover {
-  opacity: 0.6;
+  background-color: #F26684;
+  opacity: 1;
 }
 
+
 .cta-min:active {
-  opacity: 0.6;
+  background-color: #F26684;
+  opacity: 1;
 }
 
 .contact-min {
@@ -174,15 +179,15 @@ header.is-open {
 }
 
 /* ハンバーガーメニューがアクティブなときのスタイル */
-.header__toggle.active span:nth-child(1) {
+.header__toggle.is-active span:nth-child(1) {
   transform: translateY(6px) rotate(45deg);
 }
 
-.header__toggle.active span:nth-child(2) {
+.header__toggle.is-active span:nth-child(2) {
   transform: scaleX(0);
 }
 
-.header__toggle.active span:nth-child(3) {
+.header__toggle.is-active span:nth-child(3) {
   transform: translateY(-6px) rotate(-45deg);
 }
 
@@ -208,16 +213,16 @@ header.is-open {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 80%;
   background-color: #fff;
   z-index: 9998;
   padding: 24px 24px;
   overflow-y: auto;
+  box-shadow: 0px 0px 14px 0px #cedfea;
 }
 
 .header__menu {
-  padding-top: 117px;
-  // padding-left: 27px;
+  padding-top: 70px;
   text-align: center;
 }
 
@@ -251,16 +256,30 @@ header.is-open {
   transition: all 0.3s ease;
   text-align-last: left;
   position: relative;
+  &:hover {
+    opacity: 1;
+    background-color: #F26684;
+  }
 
 }
 
-.cta-min:hover {
-  opacity: 0.6;
+
+// オーバーレイ
+.overlay {
+  display: none;
+  position: fixed;
+  top: 80%;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 9997;
 }
 
-.cta-min:active {
-  opacity: 0.6;
+.overlay.is-active {
+  display: block;
 }
+
 
 // @@@@@@@@@@@@@
 // メインビジュアル
@@ -279,6 +298,10 @@ header.is-open {
 .sp-bg__top {
   background: url(../img/sp-mv__bg.png) no-repeat center center / cover;
 }
+
+
+
+
 
 .main__inner {
   display: flex;
@@ -537,33 +560,63 @@ header.is-open {
 
 .banner1 {
   width: 119px;
+  @include cmn.mq('sp'){
+    width: 83px;
+  }
 }
 .banner2 {
   width: 162px;
+  @include cmn.mq('sp'){
+    width: 113px;
+  }
 }
 .banner3 {
   width: 132px;
+  @include cmn.mq('sp'){
+    width: 92px;
+  }
 }
 .banner4 {
   width: 102px;
+  @include cmn.mq('sp'){
+    width: 71px;
+  }
 }
 .banner5 {
-  width: 214px;
+  width: 150px;
+  @include cmn.mq('sp'){
+    width: 107px;
+  }
 }
 .banner6 {
   width: 276px;
+  @include cmn.mq('sp'){
+    width: 190px;
+  }
 }
 .banner7 {
   width: 215px;
+  @include cmn.mq('sp'){
+    width: 151px;
+  }
 }
 .banner8 {
   width: 214px;
+  @include cmn.mq('sp'){
+    width: 150px;
+  }
 }
 .banner9 {
   width: 118px;
+  @include cmn.mq('sp'){
+    width: 83px;
+  }
 }
 .banner10 {
   width: 238px;
+  @include cmn.mq('sp'){
+    width: 167px;
+  }
 }
 
 .use__coment {
@@ -658,7 +711,6 @@ header.is-open {
   background-color: #ffffff;
   border: 3px solid #ffdd86;
   padding: 20px 24px;
-  min-height: 273px;
   @include cmn.mq("sp") {
     & + & {
       margin-top: 16px;

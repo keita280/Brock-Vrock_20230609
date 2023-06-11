@@ -159,16 +159,15 @@ main {
   z-index: 99; 
   border: none; 
   outline: none; 
-  background-color: pink; 
+  background-color: #E93057; 
   color: white; 
   cursor: pointer; 
   padding: 15px; 
   border-radius: 50%; 
   font-size: 18px; 
-}
-
-#scrollTop:hover {
-  background-color: gainsboro; 
+  &:hover {
+    opacity: 0.6;
+  }
 }
 
 
