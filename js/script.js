@@ -8,7 +8,7 @@ $(document).ready(function() {
     var target = $(this.getAttribute('href'));
     if (target.length) {
       event.preventDefault();
-      var offset = target.offset().top;
+      var offset = target.offset().top - 150;
       
       // グローバルメニューを閉じる（クラス名や要素に適宜変更してください）
       $('.header__toggle').removeClass('is-active');

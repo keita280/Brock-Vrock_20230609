@@ -1600,20 +1600,25 @@ header.is-open {
   font-weight: 700;
   font-size: 30px;
   line-height: 1.461;
-  margin-bottom: 95px;
+  margin-bottom: 27px;
   @include cmn.mq('sp'){
-    margin-top: 44px;
+    margin-top: 32px;
     font-size: 20px;
-    margin-bottom: 44px;
+    margin-bottom: 32px;
   }
 }
 .experience__txt {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.8571;
-  margin-bottom: 95px;
+  margin-bottom: 43px;
   @include cmn.mq('sp'){
     margin-bottom: 44px;
+  }
+  > span {
+    font-size: 22px;
+    font-family: Montserrat;
+    font-weight: 500;
   }
 }
 .experience__guide {
@@ -1639,6 +1644,35 @@ header.is-open {
   @include cmn.mq('md'){
     width: 134px;
     margin-left: 63px;
+  }
+  position: relative;
+  &::after {
+    position: absolute;
+    content: "";
+    width: 130px;
+    height: 172px;
+    background: url(../img/experience-logo.png) no-repeat center / contain;
+    top: 54px;
+    left: -181px;
+  }
+  @include cmn.mq('sp'){
+    &::after {
+      position: absolute;
+      width: 65px;
+      height: 86px;
+      top: 16px;
+      left: 238px;
+    }
+  }
+
+  @include cmn.mq("tab") {
+    &::after {
+      position: absolute;
+      width: 65px;
+      height: 86px;
+      top: 36px;
+      left: 306px;
+    }
   }
 }
 
