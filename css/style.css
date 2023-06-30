@@ -2173,7 +2173,7 @@ header.is-open {
   overflow: hidden;
 }
 
-.experience__video-wrapper video {
+.experience__video-wrapper iframe {
   position: absolute;
   width: 100%;
   height: 100%;
