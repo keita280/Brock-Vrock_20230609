@@ -10,7 +10,7 @@ $(document).ready(function() {
       event.preventDefault();
       var offset = target.offset().top - 150;
       
-      // グローバルメニューを閉じる（クラス名や要素に適宜変更してください）
+      // グローバルメニューを閉じる（クラス名や要素に適宜変更）
       $('.header__toggle').removeClass('is-active');
       $('.header__nav').removeClass('is-active');
       $('.sp-header__nav').removeClass('is-active');
@@ -87,8 +87,6 @@ $(document).ready(function() {
 });
 
 });
-
-
 
 
 

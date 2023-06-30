@@ -1,4 +1,9 @@
-// _cmn.scssを読み込む
+// ＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠
+// スタイルの中心となるファイルです
+// ＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠
+
+
+// _cmn.scssを読み込み
 @use "cmn";
 
 // @@@@@@@@@@@@@
@@ -1479,8 +1484,7 @@ header.is-open {
     margin-right: 85px;
   }
 }
-.reason__ttl-box{
-}
+
 
 .reason-logo {
   width: 158px;
@@ -1768,6 +1772,10 @@ header.is-open {
   height: 103px;
 }
 
+
+
+
+
 // @@@@@@@@@@@@@
 // CTA
 // @@@@@@@@@@@@@
@@ -1961,10 +1969,7 @@ footer {
   }
 }
 
-.footer__top {
-}
-.footer__top-img {
-}
+
 .footer__bottom {
   padding-top: 24px;
   padding-bottom: 24px;

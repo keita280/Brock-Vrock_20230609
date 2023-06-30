@@ -2831,23 +2831,23 @@ form button {
 }
 
 input::-webkit-input-placeholder {
-  color: #8a8a8a; /* ここに好きな色を指定します */
+  color: #8a8a8a;
 }
 
 input::-moz-placeholder {
-  color: #8a8a8a; /* ここに好きな色を指定します */
+  color: #8a8a8a;
 }
 
 input:-ms-input-placeholder {
-  color: #8a8a8a; /* ここに好きな色を指定します */
+  color: #8a8a8a;
 }
 
 input::-ms-input-placeholder {
-  color: #8a8a8a; /* ここに好きな色を指定します */
+  color: #8a8a8a;
 }
 
 input::placeholder {
-  color: #8a8a8a; /* ここに好きな色を指定します */
+  color: #8a8a8a;
 }
 
 .description {

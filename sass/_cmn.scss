@@ -1,14 +1,13 @@
 // ＠＠＠＠＠＠＠＠＠
-// 基本記述
+// 共通事項を記述するファイルです/
 // ＠＠＠＠＠＠＠＠＠
+
+
 @charset "utf-8";
 
-// ＠＠＠＠＠＠＠＠＠
-// レスポンシブ記述
-// ＠＠＠＠＠＠＠＠＠
 
 
-
+// レスポンシブ記述関係
 
 $breakpoints: (
   "sp": "(max-width: 980px)",
@@ -39,11 +38,10 @@ $breakpoints: (
 }
 
 
-// ＠＠＠＠＠＠＠＠＠
-// 共通事項定義
-// ＠＠＠＠＠＠＠＠＠
 
-// colors
+
+
+// 色の定義関係
 $pink:#E54E6E;
 $font-color-main: #2F3A3A;
 
@@ -58,6 +56,9 @@ a {
 .text-pink {
   color: $pink;
 } 
+
+
+
 
 // 各種ボタン
 *,
@@ -89,15 +90,11 @@ body {
 
 
 
-// ＠＠＠＠＠＠＠＠＠
 // インナー
-// ＠＠＠＠＠＠＠＠
 
 .inner {
   max-width: 980px;
   margin: 0 auto;
-  // padding-left: 40px;
-  // padding-right: 40px;
   @include mq('sp'){
     padding-left: 24px;
     padding-right: 24px;
@@ -112,6 +109,7 @@ body {
 
 
 
+// 各種要素の基本定義
 img {
   width: 100%;
 }
